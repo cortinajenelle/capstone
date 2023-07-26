@@ -30,29 +30,37 @@ router.hooks({
       params && params.data && params.data.view
         ? capitalize(params.data.view)
         : "Home";
+        switch (view) {};
+              done();
+          })
+          .catch((err) => {
+            console.log(err);
+            done();
+          });
+          break;
 
-already: params => {
-  const view =
-    params && params.data && params.data.view
-      ? capitalize(params.data.view)
-      : "Home";
+  already: params => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Home";
 
-  render(store[view]);
-}
-});
+    render(store[view]);
+  };
 
 router.on(
-  
-{
-  "/": () => render(), 
-  ":view": (params) => {
-            let view = capitalize(params.data.view);
-            if (view in store) {
-              render(store[view]);
-            } else {
-              console.log(`View ${view} not defined`);
-              render(store.Viewnotfound);
-            }
-          },
-  },
-  ).resolve();
+    
+  {
+    "/": () => render(), 
+    ":view": (params) => {
+              let view = capitalize(params.data.view);
+              if (view in store) {
+                render(store[view]);
+              } else {
+                console.log(`View ${view} not defined`);
+                render(store.Viewnotfound);
+              }
+            },
+    },
+
+).resolve();

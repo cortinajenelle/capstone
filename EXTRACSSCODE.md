@@ -70,3 +70,42 @@
       margin-right: 1rem;
     }
   
+
+        form {
+        border: solid 1px black;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 1rem;
+      }
+      
+      form > * {
+        margin: 0.5rem;
+      }
+      
+      form > input[type="submit"] {
+        width: 40%;
+        margin: 0.5rem;
+        margin-right: auto;
+      }
+
+
+  body {
+  background-color: white;
+  color: black; 
+}
+
+.nav-bar {
+  border-top: solid 1px #287429;
+  background-color: black;
+  padding: 1em;
+  color: #A3E7AE;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+footer {
+  padding: .5em;
+  border-top: solid 1px #287429;
+  background-color: black;
+  color: #A3E7AE; 
+  margin: 1rem 1rem;
