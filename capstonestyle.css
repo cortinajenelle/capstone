@@ -1,18 +1,23 @@
 body {
-  background-color: #000000;
+  background-color: white;
+  color: black; 
 }
 
 .nav-bar {
-  background-color: #A3E7AE;
+  border-top: solid 1px #287429;
+  background-color: black;
   padding: 1em;
-  color: #000000;
+  color: #A3E7AE;
   font-size: 1.2em;
   font-weight: 600;
 }
 
 footer {
   padding: .5em;
-  background-color: #ffffff;
+  border-top: solid 1px #287429;
+  background-color: black;
+  color: #A3E7AE; 
+  margin: 1rem 1rem;
 }
   
   nav > ul > li {
@@ -21,11 +26,6 @@ footer {
     display: inline-block;
   }
   
-  footer {
-    border-top: solid 1px black;
-    padding: 2rem 2rem 4rem;
-    margin: 1rem 1rem;
-  }
   
   #bio {
     margin: 1rem;
@@ -85,4 +85,3 @@ footer {
     nav > .fa-bars {
       display: none;
     }
-    

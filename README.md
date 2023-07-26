@@ -97,18 +97,50 @@ How my application will be different:
 
 STRENGTHS 
 
+Prior profess experience with web design + project mgmt
+Focus on community, environment,, connection, engagement and mutual aid which are unifiers across differences
+Not currently a web app exactly like this one
+Gap in market provides opportunity to engage end user early + build loyalty
 
+_How can strengths be maximized?_
+Design web app to my strengths in design and keep code simple
 
 WEAKNESSES 
 
+Learning curve of coding to build web app in 12 wks
+Not knowing what I do not know, yet, and how that will impact timeline
+Short beta testing cycle before web app has to be presented + functional
+Limited functionality (no login or payment portal for “true” membership)
 
+_How can weaknesses be minimal?_
+Give extra time at milestones.
+Practice sections outside of class time.
 
 OPPORTUNITIES 
 
+Eco-tourism, wellness community apps out there prove there is a need
+Current partnerships + collabs with Tennessee Valley farmers + tech community
+Conversation starter for potential investors or think tanks
+Future grant funding for tech and ag
 
+_How can opportunities be taken advantage of?_
+Prioritize LinkedIN profile. 
+Network with local tech comm, intro my coding journey. Ask for coffees. 
+Host talks or topics @ meetups.
 
 THREATS
 
+Not much else out there to compare it to, potential disruptor app
+Conservative end-user may be distrusting of tech
+Tech-savvy end user may have higher expectations
+Building up a solid base of Tennessee Valley freelancers (not tourists)
+
+_How can these threats be avoided?_
+Ask for support from instructors, mentors and coaches 
+Be myself in spaces..be uncomfortable if necessary 
+Use my DEI + facilitation training to help w/ comm
+Be open minded 
+Don’t take shit personally
 
 
 
