@@ -93,6 +93,23 @@ How my application will be different:
 - Worldpackers vs FF = not focused on volunteer holidays 
 - Working Traveller vs FF = zooming in on jobs in creative, IT, digital space
 
+## SWOT Analysis 
+
+STRENGTHS 
+
+
+
+WEAKNESSES 
+
+
+
+OPPORTUNITIES 
+
+
+
+THREATS
+
+
 
 
 
