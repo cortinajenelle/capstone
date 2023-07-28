@@ -13,6 +13,9 @@ function render(state = store.Home) {
     ${Main(state)}
     ${Footer()}
   `;
+
+  render();
+  
   afterRender(state);
   router.updatePageLinks();
 }
