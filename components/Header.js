@@ -2,6 +2,6 @@ import html from "html-literal";
 
 export default state => html`
   <header>
-      <h1>LANDSCAPE</h1>
-    </header>
+    <h1>LANDSCAPE</h1>
+  </header>
 `;

@@ -24,30 +24,6 @@ function afterRender(state) {
   });
 }
 
-router.hooks({
-  before: (done, params) => {
-    const view =
-      params && params.data && params.data.view
-        ? capitalize(params.data.view)
-        : "Home";
-        switch (view) {};
-              done();
-          })
-          .catch((err) => {
-            console.log(err);
-            done();
-          });
-          break;
-
-  already: params => {
-    const view =
-      params && params.data && params.data.view
-        ? capitalize(params.data.view)
-        : "Home";
-
-    render(store[view]);
-  };
-
 router.on(
     
   {
