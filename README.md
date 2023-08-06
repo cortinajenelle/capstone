@@ -142,6 +142,10 @@ Use my DEI + facilitation training to help w/ comm
 Be open minded 
 Don’t take shit personally
 
+## Capstone Reflection 
+
+The most impactful project I have completed in the last year is my web application - landScape. This web development application connected local farmers and digital freelancers to engage in a value exchange of goods and services that enhanced the quality of life for everyone involved and bridged a community gap through common need + shared desire (i.e. time freedom, capacity widens/distribute labor, access to healthy foods, building community network, etc). The web application profiled 10 local Chattanooga farms and 10 freelancers as a beta-test to provide a space where both groups could connect over digital content and farmgoods. Not only was the resulting app impactful for farmers to meet a need that otherwise goes unmet as they focus time on the physical labor demands of the farm, it was also impactful for web developers to access healthy foods & farmgoods as opposed to reaching for the more convenient, fast food, which in turn negatively impacts their productivity and performance on the job. This was a win-win for everyone due to the evidence of how technology can positively contribute to our lives and provide time freedom, which reduces stress and adds to our overall well-being. Furthermore, high quality work is being achieved on all sides and there is a stronger community as a result. 
+
 
 
 
