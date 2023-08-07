@@ -9,7 +9,7 @@
 }
       
 #jumbotron {
-  background: url(./assets/photo-1528334713982-2d1fe11a157a.jpg) center center no-repeat;  background-size: cover;
+  background: url(./assets/dan-meyers-IQVFVH0ajag-unsplash.jpg) center center no-repeat;  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,7 @@
 }
       
 #jumbotron > h2 {
-  color: white;
+  color: black;
   text-align: center;
 }
       
