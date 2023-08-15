@@ -1,6 +1,7 @@
 import html from "html-literal";
 
 export default state => html`
+<div id="fas fa-bars">
 <div id="jumbotron">
 </div id="welcome">
   <h2>Welcome, Digi-Nauts & Planeteers!</h2>
