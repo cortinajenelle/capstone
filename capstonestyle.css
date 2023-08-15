@@ -1,97 +1,172 @@
-body {
-  font-family: "Sofia Sans", sans-serif;
+html {
+  max-width: 100%;
+  height: auto;
 }
 
-.nav-bar {
-  border-top: solid 1px #287429;
-  background-color: black;
-  padding: 1em;
+div {
+  background-color: red; 
+}
+
+h2 {
+  font-family: "Major Mono Display", sans-serif;
+  margin-right: 10px;
+}
+
+h3 {
+  font-family: "Major Mono Display", sans-serif;
+  font-size: 14px;
   color: #A3E7AE;
-  font-size: 1.2em;
-  font-weight: 600;
+}
+
+body {
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 17px;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  flex-direction: left;
+  padding: 0;
+ }
+     
+ nav > ul > li {
+   padding: 0.5rem;
+   list-style-type: none;
+ }
+    
+
+.logo {
+  background: url(./assets/logo.png) center center no-repeat; background-size: cover;
+  margin-left: 10px;
+  width: 200px;
+  height: 200px;
 }
       
 #jumbotron {
-  background: url(./assets/dan-meyers-IQVFVH0ajag-unsplash.jpg) center center no-repeat;  background-size: cover;
+  background: url(./assets/branded-dan-meyers-IQVFVH0ajag-unsplash.png) center center no-repeat;  background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90vh;
 }
-      
-#jumbotron > h2 {
-  color: black;
-  text-align: center;
+
+#welcome {
+  display: flex;
+  justify-content: flex-start;
 }
+
       
-#jumbotron > a {
-  text-decoration: none;
+#ideabox {
+  display: flex;
+  justify-content: flex-end;
   background-color: white;
-  font-size: 1.5em;
-  padding: 1.5rem;
-  border-radius: 10px;
+  font-size: 15px;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  font-family: "Major Mono Display", sans-serif;
+  color: #A3E7AE;
+  background-color: #000000;
+  border: none; 
+  border-radius: 15px; 
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  background-color: #f4ba0c;
 }
       
-footer {
-  border-top: solid 1px black;
-  padding: 2rem 2rem 4rem;
-  margin: 1rem 1rem;
+.footer {
+  border-top: solid 2px #287429;
+  border-bottom: solid 2px #287429;
+  background: #A3E7AE;
+  margin: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: right;
+  padding: 2rem 2rem 2rem;
+  margin: 0rem 0rem;
+}
+
+@media (max-width: 549px){
+  .hidden--mobile {
+    display: none !important;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
     
-      
-  @media (max-width: 549px){
-    .hidden--mobile {
-      display: none !important;
+nav > i {
+  padding: 1rem;
+  font-size: 2em;
   }
-      
-  nav {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0;
   }
-      
-   nav > i {
-   padding: 1rem;
-   font-size: 2em;
-   }
-      
+    
+nav > ul > li {
+ display: inline-block;
+ text-decoration: none;
+ border: 1px solid;
+ padding: 0.5rem 0.5rem;
+ border-radius: 25px;
+}
+ }
+
+@media (min-width: 550px){
   nav > ul {
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   padding: 0 0;
-  }
-      
-  nav > ul > li {
-    padding: 0.5rem;
-    list-style-type: none;
-  }
-      
-  #bio img {
-    float: left;
-    width: 40%;
-    height: auto;
-    margin-right: 1rem;
-  }
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 0;
 }
-      
-  @media (min-width: 550px) {
-    nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 0;
-  }
-      
-  nav > ul > li {
-   display: inline-block;
-   text-decoration: none;
-   border: 1px solid;
-   padding: 0.5rem 0.5rem;
-   border-radius: 25px;
-  }
-      
-  nav > .fa-bars {
-    display: none;
-  }
+
+nav > ul > li {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 0.5rem 0.5rem;
+  border-radius: 25px;
 }
+
+nav > .fa-bars {
+  display: flex;
+  justify-content: flex-end;
+  border-top: solid 2px #287429;
+  border-bottom: solid 2px #287429;
+  background: #A3E7AE;
+  padding: 1em;
+  margin: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color:  black;
+  text-align: center;
+  padding: 2rem 0rem 2rem;
+  margin: 1rem 1rem;
+  font-size: 16px;
+}
+ }

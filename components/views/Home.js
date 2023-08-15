@@ -1,10 +1,9 @@
 import html from "html-literal";
 
 export default state => html`
-  <section id="jumbotron">
-    <h2>Have An Idea to Propose?</h2>
-    <a href="index.html">Mission Turbo Boost</a>
-  </section id="welcome">
+<div id="fas fa-bars">
+<div id="jumbotron">
+</div id="welcome">
   <h2>Welcome, Digi-Nauts & Planeteers!</h2>
   <p> Your mission is to support me to return to my fullest health and vitality. Let me explain!
       The year is 2023 and the world is seemingly in chaos from all the waste, litter and over-
@@ -17,5 +16,11 @@ export default state => html`
 
       And remember, the power is yours!
   </p>
-  <h3>xo, Gaia </h3>
+  <h2>xo, Gaia </h2>
+</>
+  <div id="ideabox"> 
+    <h2>Have An Idea to Propose?</h2>
+    <br>
+    <button class="button"><a href="https://landscape-capstone.netlify.app/contact"><h3>Turbo Boost Mission</h3></a>
+</div>
 `;
