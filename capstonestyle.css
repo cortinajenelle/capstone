@@ -1,8 +1,14 @@
+h2 {
+  font-family: "Major Mono Display", sans-serif;
+}
+
 body {
   font-family: "Sofia Sans", sans-serif;
 }
 
 .nav-bar {
+  background: url(./assets/Caldwell_CortinaCapstoneLogoTransparent.png) left;  background-size: cover;
+  display: flex;
   border-top: solid 1px #287429;
   background-color: black;
   padding: 1em;
@@ -12,7 +18,7 @@ body {
 }
       
 #jumbotron {
-  background: url(./assets/dan-meyers-IQVFVH0ajag-unsplash.jpg) center center no-repeat;  background-size: cover;
+  background: url(./assets/branded-dan-meyers-IQVFVH0ajag-unsplash.png) center center no-repeat;  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;

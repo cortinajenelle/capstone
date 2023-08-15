@@ -17,5 +17,5 @@ export default state => html`
 
       And remember, the power is yours!
   </p>
-  <h3>xo, Gaia </h3>
+  <h2>xo, Gaia </h2>
 `;
