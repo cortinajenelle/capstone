@@ -51,6 +51,12 @@ nav > ul {
   height: 90vh;
 }
 
+img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+}
+
 #welcome {
   display: flex;
   justify-content: flex-start;
