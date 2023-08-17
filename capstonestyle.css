@@ -1,10 +1,13 @@
 html {
   max-width: 100%;
   height: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 div {
-  background-color: red; 
+  background-color: red;
 }
 
 h2 {
@@ -29,12 +32,12 @@ nav > ul {
   flex-direction: left;
   padding: 0;
  }
-     
+
  nav > ul > li {
    padding: 0.5rem;
    list-style-type: none;
  }
-    
+
 
 .logo {
   background: url(./assets/logo.png) center center no-repeat; background-size: cover;
@@ -42,7 +45,7 @@ nav > ul {
   width: 200px;
   height: 200px;
 }
-      
+
 #jumbotron {
   background: url(./assets/branded-dan-meyers-IQVFVH0ajag-unsplash.png) center center no-repeat;  background-size: cover;
   display: flex;
@@ -62,7 +65,7 @@ img {
   justify-content: flex-start;
 }
 
-      
+
 #ideabox {
   display: flex;
   justify-content: flex-end;
@@ -83,15 +86,15 @@ img {
   font-family: "Major Mono Display", sans-serif;
   color: #A3E7AE;
   background-color: #000000;
-  border: none; 
-  border-radius: 15px; 
+  border: none;
+  border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
 .button:hover {
   background-color: #f4ba0c;
 }
-      
+
 .footer {
   border-top: solid 2px #287429;
   border-bottom: solid 2px #287429;
@@ -121,7 +124,7 @@ nav {
   align-items: center;
   flex-direction: column;
 }
-    
+
 nav > i {
   padding: 1rem;
   font-size: 2em;
@@ -133,7 +136,7 @@ nav > ul {
   flex-direction: column;
   padding: 0 0;
   }
-    
+
 nav > ul > li {
  display: inline-block;
  text-decoration: none;
