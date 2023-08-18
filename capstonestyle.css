@@ -1,18 +1,16 @@
 html {
   max-width: 100%;
   height: auto;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 div {
   background-color: red;
+  padding: 0px;
+
 }
 
 h2 {
   font-family: "Major Mono Display", sans-serif;
-  margin-right: 10px;
 }
 
 h3 {
@@ -24,6 +22,12 @@ h3 {
 body {
   font-family: "Sofia Sans", sans-serif;
   font-size: 17px;
+}
+
+#welcome {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 nav > ul {
@@ -40,14 +44,16 @@ nav > ul {
 
 
 .logo {
-  background: url(./assets/logo.png) center center no-repeat; background-size: cover;
+  background: url(./assets/logo.png) center center no-repeat;
+  background-size: cover;
   margin-left: 10px;
   width: 200px;
   height: 200px;
 }
 
 #jumbotron {
-  background: url(./assets/branded-dan-meyers-IQVFVH0ajag-unsplash.png) center center no-repeat;  background-size: cover;
+  background: url(./assets/branded-dan-meyers-IQVFVH0ajag-unsplash.png) center center no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +64,7 @@ img {
   max-width: 100%;
   max-height: 300px;
   height: auto;
+  padding: 0px;
 }
 
 #welcome {
@@ -98,6 +105,7 @@ img {
 .footer {
   border-top: solid 2px #287429;
   border-bottom: solid 2px #287429;
+  box-sizing: border-box;
   background: #A3E7AE;
   margin: 10px;
   left: 0;
@@ -138,11 +146,12 @@ nav > ul {
   }
 
 nav > ul > li {
- display: inline-block;
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
  text-decoration: none;
  border: 1px solid;
- padding: 0.5rem 0.5rem;
- border-radius: 25px;
+ padding: 0rem 0rem;
 }
  }
 
@@ -158,7 +167,7 @@ nav > ul > li {
   text-decoration: none;
   border: 1px solid;
   padding: 0.5rem 0.5rem;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 nav > .fa-bars {
@@ -168,14 +177,12 @@ nav > .fa-bars {
   border-bottom: solid 2px #287429;
   background: #A3E7AE;
   padding: 1em;
-  margin: 10px;
-  left: 0;
-  bottom: 0;
+  margin: 0px;
   width: 100%;
   color:  black;
-  text-align: center;
+  align-items: flex-end;
   padding: 2rem 0rem 2rem;
-  margin: 1rem 1rem;
+  margin: 0rem 0rem 0rem;
   font-size: 16px;
 }
  }

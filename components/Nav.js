@@ -1,19 +1,15 @@
 import html from "html-literal";
+import logo from "../assets/logo.png";
 
 export default links => html`
   <nav>
     <div class="logo">
       <a href="https://landscape-capstone.netlify.app">
-        <img
-          src="./assets/logo.png"
-          width="200"
-          height="200"
-          alt="landScape logo"
-        />
+        <img src="${logo}" width="200" height="200" alt="landScape logo" />
       </a>
     </div>
     <i class="fas fa-bars menu-toggle"></i>
-  <ul class="hidden--mobile nav-links">
+    <ul class="hidden--mobile nav-links">
       ${links
         .map(
           link =>
