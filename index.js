@@ -1,4 +1,3 @@
-/* eslint-disable no-prototype-builtins */
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import { Header, Nav, Main, Footer } from "./components/";
@@ -27,39 +26,87 @@ function afterRender(state) {
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
-}
 
-if (state.view === "Contact") {
-  // Initialize the map DOM element, set the focus point and zoom level
-  map = L.map("map").setView([51.505, -0.09], 13);
+  if (state.view === "Contact") {
+    /*
+      Please refer to the documentation:
+      https://developer.mapquest.com/documentation/mapquest-js/v1.3/
+    */
 
-  // Initialize the background (earth) layer so that markers appear to belong somewhere
-  L.tileLayer(`https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`, {
-    attribution:
-      'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18
-  }).addTo(map);
+    L.mapquest.key = process.env.MAPQUEST_KEY;
 
-  // Create a group of markers so we can get their outside bounding box
-  var markerArray = [];
-
-  console.log("matsinet-state.parks:", state.parks);
-
-  // Iterate of the parks, create a marker and add it to the marker group
-  state.parks.forEach(park => {
-    // console.log(`${park.name} is located at ${park.latitude}, ${park.longitude}`);
-
-    const marker = L.marker([park.latitude, park.longitude]).bindPopup(
-      `${park.name}<br>${park.addresses[0].city}, ${park.addresses[0].stateCode}`
+    const baseLayer = L.mapquest.tileLayer("map");
+    const precipitationLayer = L.tileLayer(
+      `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
+      { layer: "precipitation_new" }
+    );
+    const temperatureLayer = L.tileLayer(
+      `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
+      { layer: "temp_new" }
+    );
+    const windLayer = L.tileLayer(
+      `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
+      { layer: "wind_new" }
     );
 
-    markerArray.push(marker);
-  });
+    // 'map' refers to a <div> element with the ID map
+    const map = L.mapquest.map("map", {
+      center: [42, -71],
+      layers: baseLayer,
+      zoom: 5
+    });
 
-  // Add marker group to the map so that it is displayed
-  var group = L.featureGroup(markerArray).addTo(map);
-  // Force the map to zoom to the bounds of the group
-  map.fitBounds(group.getBounds());
+    L.mapquest
+      .textMarker([42, -71], {
+        text: "Sample Marker",
+        subtext: "Click Here for More Details",
+        position: "right",
+        type: "marker",
+        hover: "Howdy",
+        icon: {
+          primaryColor: "#333333",
+          secondaryColor: "#333333",
+          size: "sm"
+        }
+      })
+      .addTo(map);
+
+    L.marker([30, -90], {
+      icon: L.mapquest.icons.marker({
+        primaryColor: "#22407F",
+        secondaryColor: "#3B5998",
+        shadow: true,
+        size: "md"
+        // symbol: 'T'
+      })
+    }).addTo(map);
+
+    map.addControl(L.mapquest.control());
+
+    // L.mapquest
+    //   .directionsControl({
+    //     routeSummary: {
+    //       enabled: false
+    //     },
+    //     narrativeControl: {
+    //       enabled: true,
+    //       compactResults: false
+    //     }
+    //   })
+    //   .addTo(map);
+
+    // https://leafletjs.com/reference.html#control-layers
+    L.control
+      .layers(
+        {},
+        {
+          Temperature: temperatureLayer,
+          Precipitation: precipitationLayer,
+          Wind: windLayer
+        }
+      )
+      .addTo(map);
+  }
 }
 
 //  ADD ROUTER HOOKS HERE ...
