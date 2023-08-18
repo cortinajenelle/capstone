@@ -19,8 +19,6 @@ function render(state = store.Home) {
   afterRender(state);
 }
 
-render();
-
 function afterRender(state) {
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
@@ -55,21 +53,25 @@ function afterRender(state) {
       layers: baseLayer,
       zoom: 5
     });
-
-    L.mapquest
-      .textMarker([42, -71], {
-        text: "Sample Marker",
-        subtext: "Click Here for More Details",
-        position: "right",
-        type: "marker",
-        hover: "Howdy",
-        icon: {
-          primaryColor: "#333333",
-          secondaryColor: "#333333",
-          size: "sm"
-        }
-      })
-      .addTo(map);
+    state.pins.forEach(pin => {
+      L.mapquest
+        .textMarker(
+          [pin.locations[0].latLng.lat, pin.locations[0].latLng.lng],
+          {
+            text: `${pin.locations[0].adminArea5}, ${pin.locations[0].adminArea3}`,
+            subtext: "Click Here for More Details",
+            position: "right",
+            type: "marker",
+            hover: "Howdy",
+            icon: {
+              primaryColor: "#333333",
+              secondaryColor: "#333333",
+              size: "sm"
+            }
+          }
+        )
+        .addTo(map);
+    });
 
     L.marker([30, -90], {
       icon: L.mapquest.icons.marker({
@@ -118,21 +120,32 @@ router.hooks({
       view = params.data.view ? capitalize(params.data.view) : "Home";
     }
 
-    if (view === "Map") {
-      // Verify the environment are being comsumed. Placed here as this is the first place that the environment is being consumed.
+    if (view === "Contact") {
+      // Verify the environment are being consumed. Placed here as this is the first place that the environment is being consumed.
       // Since it is not always possible to console log the entire `process.env` variable, we will output each attribute required below.
-      console.log(
-        "matsinet-process.env.MAPBOX_ACCESS_TOKEN:",
-        process.env.MAPBOX_ACCESS_TOKEN
-      );
-      console.log("matsinet-process.env.NPS_API_KEY:", process.env.NPS_API_KEY);
+      let requestBody = {
+        locations: [],
+        options: {
+          maxResults: 1,
+          thumbMaps: true,
+          ignoreLatLngInput: false
+        }
+      };
+      store.Contact.farms.forEach(farm => {
+        requestBody.locations.push({
+          city: farm.city,
+          state: farm.state,
+          address: farm.address1
+        });
+      });
 
       axios
-        .get(
-          `https://developer.nps.gov/api/v1/parks?limit=40&api_key=${process.env.NPS_API_KEY}`
+        .post(
+          `https://www.mapquestapi.com/geocoding/v1/batch?key=${process.env.MAPQUEST_KEY}`,
+          requestBody
         )
         .then(response => {
-          store.Map.parks = response.data.data;
+          store.Contact.pins = response.data.results;
           done();
         });
     } else {
