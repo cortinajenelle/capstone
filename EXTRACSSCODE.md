@@ -1,5 +1,5 @@
 <!-- THIS IS CSS FROM THE SPA FORMATTING FOR THE MAIN HOMEPAGE ENVIRONMENT -->
-  
+
   #jumbotron {
     background: url(assets/img/photo-1528334713982-2d1fe11a157a.jpg) center center no-repeat;  background-size: cover;
     display: flex;
@@ -8,12 +8,12 @@
     align-items: center;
     height: 90vh;
   }
-  
+
   #jumbotron > h2 {
     color: white;
     text-align: center;
   }
-  
+
   #jumbotron > a {
     text-decoration: none;
     background-color: white;
@@ -28,11 +28,11 @@
     flex-direction: column;
     margin: 1rem 1rem;
   }
-  
+
   form > * {
     margin: 0.5rem;
   }
-  
+
   form > input[type="submit"] {
     width: 40%;
     margin: 0.5rem;
@@ -46,15 +46,15 @@
     width: 92.5%;
     margin: auto;
   }
-  
+
   #pizzas tbody {
     width: 100%;
   }
-  
+
   #pizzas th {
     text-align: left;
   }
-  
+
   #pizzas td,th {
     width: 25%;
   }
@@ -62,14 +62,14 @@
  #bio {
       margin-right: 3rem;
     }
-  
+
     #bio img {
       float: left;
       width: 25%;
       height: auto;
       margin-right: 1rem;
     }
-  
+
 
         form {
         border: solid 1px black;
@@ -77,11 +77,11 @@
         flex-direction: column;
         margin: 1rem 1rem;
       }
-      
+
       form > * {
         margin: 0.5rem;
       }
-      
+
       form > input[type="submit"] {
         width: 40%;
         margin: 0.5rem;
@@ -91,7 +91,7 @@
 
   body {
   background-color: white;
-  color: black; 
+  color: black;
 }
 
 .nav-bar {
@@ -107,7 +107,7 @@ footer {
   padding: .5em;
   border-top: solid 1px #287429;
   background-color: black;
-  color: #A3E7AE; 
+  color: #A3E7AE;
   margin: 1rem 1rem;
 
   <!-- this is peer code as a reference -->
@@ -379,3 +379,8 @@ body{
         display: none;
       }
 }
+
+      <div id="logo" /div> <img src="${logo}"/>
+
+      <div class="logo">landScape</div>
+  </div>
