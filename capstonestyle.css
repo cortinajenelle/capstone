@@ -3,12 +3,6 @@ html {
   height: auto;
 }
 
-div {
-  background-color: red;
-  padding: 0px;
-
-}
-
 h2 {
   font-family: "Major Mono Display", sans-serif;
 }
@@ -70,6 +64,10 @@ img {
 #welcome {
   display: flex;
   justify-content: flex-start;
+}
+
+#map {
+  height: 500px;
 }
 
 
