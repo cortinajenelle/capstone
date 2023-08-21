@@ -2,7 +2,7 @@
 
 ## Style Guide
 
-Color Palette: Night (#0B1507) / Office Green (#287429) / Celadon (#A3E7AE) / White (#ffffff)
+Color Palette: Night (#0B1507) / Office Green (#287429) / Celadon (#A3E7AE) / White (#ffffff / Goldenrod #f4ba0c)
 Images: IMAGES ARE IN LINKS FILE
 Fonts (Google Fonts): Body=Courier Prime / Title= Sofia Sans or Major Mono Display
 Logo (Free Logo Creator): **INSERT LOGO LINK**
@@ -165,7 +165,8 @@ Erin's Meadow Herb Farm
 Clinton, TN 37716
 
 Fall Creek Farms
-Spencer, Tennessee
+545 Walling Rd
+Spencer, TN 38585
 
 Fresh Tech Growers
 688 Cofer Cemetery Lane
