@@ -59,7 +59,7 @@ function afterRender(state) {
           [pin.locations[0].latLng.lat, pin.locations[0].latLng.lng],
           {
             text: `${pin.locations[0].adminArea5}, ${pin.locations[0].adminArea3}`,
-            subtext: "Click Here for More Details",
+            subtext: "Click for Farm Details",
             position: "right",
             type: "marker",
             hover: "Howdy",
