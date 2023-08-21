@@ -2,7 +2,7 @@ export default {
   header: "Contact",
   view: "Contact",
   farms: [
-    {
+    /*    {
       name: "Bird Fork Farm",
       address1: "261 Lewis Cross Road",
       address2: "",
@@ -101,10 +101,10 @@ export default {
       zip: "37404",
       farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
-    }
+    }*/
   ],
   pins: [
-    {
+    /*  {
       name: "Bird Fork Farm",
       lat: 35.37096,
       lng: -85.38843
@@ -153,6 +153,6 @@ export default {
       name: "The Backyard Nursery",
       lat: 35.04672,
       lng: -85.30947
-    }
+    }*/
   ]
 };

@@ -13,11 +13,11 @@ const farmerSchema = new mongoose.Schema({
   },
   address2: {
     type: String,
-    required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
   city: {
     type: String,
+    required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
   state: {
@@ -31,16 +31,13 @@ const farmerSchema = new mongoose.Schema({
     validate: /^[0-9 ]*$/
   },
   farmgoods: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+    type: [String],
+    required: true
   },
   opportunity: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
-  },
-  order: { type: mongoose.Schema.Types.ObjectId, ref: "Network" }
+    type: [String],
+    required: true
+  }
 });
 
 const Farmer = mongoose.model("Farmer", farmerSchema);

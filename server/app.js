@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import farmers from "./routers/farmers.js";
 
 const app = express();
 
@@ -66,5 +67,7 @@ app.post("/add", (request, response) => {
   };
   response.json(responseBody);
 });
+
+app.use("/farmers", farmers);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

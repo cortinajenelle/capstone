@@ -1,4 +1,5 @@
 export default {
   header: "Farmers",
-  view: "Farmers"
+  view: "Farmers",
+  farmers: []
 };

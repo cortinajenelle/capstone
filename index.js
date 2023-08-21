@@ -123,31 +123,30 @@ router.hooks({
     if (view === "Contact") {
       // Verify the environment are being consumed. Placed here as this is the first place that the environment is being consumed.
       // Since it is not always possible to console log the entire `process.env` variable, we will output each attribute required below.
-      let requestBody = {
-        locations: [],
-        options: {
-          maxResults: 1,
-          thumbMaps: true,
-          ignoreLatLngInput: false
-        }
-      };
-      store.Contact.farms.forEach(farm => {
-        requestBody.locations.push({
-          city: farm.city,
-          state: farm.state,
-          address: farm.address1
-        });
-      });
-
-      axios
-        .post(
-          `https://www.mapquestapi.com/geocoding/v1/batch?key=${process.env.MAPQUEST_KEY}`,
-          requestBody
-        )
-        .then(response => {
-          store.Contact.pins = response.data.results;
-          done();
-        });
+      // let requestBody = {
+      //   locations: [],
+      //   options: {
+      //     maxResults: 1,
+      //     thumbMaps: true,
+      //     ignoreLatLngInput: false
+      //   }
+      // };
+      // store.Contact.farms.forEach(farm => {
+      //   requestBody.locations.push({
+      //     city: farm.city,
+      //     state: farm.state,
+      //     address: farm.address1
+      //   });
+      // });
+      // axios
+      //   .post(
+      //     `https://www.mapquestapi.com/geocoding/v1/batch?key=${process.env.MAPQUEST_KEY}`,
+      //     requestBody
+      //   )
+      //   .then(response => {
+      //     store.Contact.pins = response.data.results;
+      //     done();
+      //   });
     } else {
       done();
     }

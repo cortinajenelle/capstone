@@ -1,5 +1,6 @@
 import { Router } from "express";
 import Farmer from "../models/Farmer.js";
+import axios from "axios";
 
 const router = Router();
 
@@ -8,9 +9,29 @@ router.post("/", async (request, response) => {
   try {
     const newFarmer = new Farmer(request.body);
 
-    const data = await newFarmer.save();
+    if (newFarmer.address1 && newFarmer.city && newFarmer.state) {
+      const requestData = {
+        location: `${newFarmer.address1} ${newFarmer.city} ${newFarmer.state}`,
+        options: {
+          thumbMaps: false
+        }
+      };
 
-    response.json(data);
+      await axios
+        .post(
+          `https://www.mapquestapi.com/geocoding/v1/address?key=${process.env.MAPQUEST_KEY}`,
+          requestData
+        )
+        .then(async mapquestData => {
+          console.log(mapquestData.data.results.locations);
+
+          newFarmer.lat = mapquestData.data.results.locations[0].latLng.lat;
+          newFarmer.lng = mapquestData.data.results.locations[0].latLng.lng;
+          const data = await newFarmer.save();
+
+          response.json(data);
+        });
+    }
   } catch (error) {
     // Output error to the console incase it fails to send in response
     console.log(error);
