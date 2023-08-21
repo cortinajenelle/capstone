@@ -37,6 +37,12 @@ const farmerSchema = new mongoose.Schema({
   opportunity: {
     type: [String],
     required: true
+  },
+  lat: {
+    type: Number
+  },
+  lng: {
+    type: Number
   }
 });
 

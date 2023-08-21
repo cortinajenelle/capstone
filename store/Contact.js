@@ -102,57 +102,5 @@ export default {
       farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     }*/
-  ],
-  pins: [
-    /*  {
-      name: "Bird Fork Farm",
-      lat: 35.37096,
-      lng: -85.38843
-    },
-    {
-      name: "Circle S Farms",
-      lat: 35.16018,
-      lng: -84.87532
-    },
-    {
-      name: "Crabtree Farms",
-      lat: 35.04672,
-      lng: -85.30947
-    },
-    {
-      name: "Fall Creek Farms",
-      lat: 35.74694,
-      lng: -85.46466
-    },
-    {
-      name: "Erin's Meadow Herb Farm",
-      lat: 36.10082,
-      lng: -84.13303
-    },
-    {
-      name: "Fresh Tech Growers",
-      lat: 35.30107,
-      lng: -84.95929
-    },
-    {
-      name: "Red Clay Farm",
-      lat: 35.16018,
-      lng: -84.87532
-    },
-    {
-      name: "Hernandez Farms",
-      lat: 35.6027,
-      lng: -85.92011
-    },
-    {
-      name: "Tant Hill Farm",
-      lat: 36.52069,
-      lng: -86.02553
-    },
-    {
-      name: "The Backyard Nursery",
-      lat: 35.04672,
-      lng: -85.30947
-    }*/
   ]
 };

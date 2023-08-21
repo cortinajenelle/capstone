@@ -53,23 +53,21 @@ function afterRender(state) {
       layers: baseLayer,
       zoom: 5
     });
-    state.pins.forEach(pin => {
+    console.log(state);
+    state.farms.forEach(farm => {
       L.mapquest
-        .textMarker(
-          [pin.locations[0].latLng.lat, pin.locations[0].latLng.lng],
-          {
-            text: `${pin.locations[0].adminArea5}, ${pin.locations[0].adminArea3}`,
-            subtext: "Click for Farm Details",
-            position: "right",
-            type: "marker",
-            hover: "Howdy",
-            icon: {
-              primaryColor: "#333333",
-              secondaryColor: "#333333",
-              size: "sm"
-            }
+        .textMarker([farm.lat, farm.lng], {
+          text: farm.name,
+          subtext: "Click for Farm Details",
+          position: "right",
+          type: "marker",
+          hover: "Howdy",
+          icon: {
+            primaryColor: "#333333",
+            secondaryColor: "#333333",
+            size: "sm"
           }
-        )
+        })
         .addTo(map);
     });
 
@@ -120,35 +118,18 @@ router.hooks({
       view = params.data.view ? capitalize(params.data.view) : "Home";
     }
 
-    if (view === "Contact") {
-      // Verify the environment are being consumed. Placed here as this is the first place that the environment is being consumed.
-      // Since it is not always possible to console log the entire `process.env` variable, we will output each attribute required below.
-      // let requestBody = {
-      //   locations: [],
-      //   options: {
-      //     maxResults: 1,
-      //     thumbMaps: true,
-      //     ignoreLatLngInput: false
-      //   }
-      // };
-      // store.Contact.farms.forEach(farm => {
-      //   requestBody.locations.push({
-      //     city: farm.city,
-      //     state: farm.state,
-      //     address: farm.address1
-      //   });
-      // });
-      // axios
-      //   .post(
-      //     `https://www.mapquestapi.com/geocoding/v1/batch?key=${process.env.MAPQUEST_KEY}`,
-      //     requestBody
-      //   )
-      //   .then(response => {
-      //     store.Contact.pins = response.data.results;
-      //     done();
-      //   });
-    } else {
-      done();
+    switch (view) {
+      case "Contact":
+      case "Farmers":
+        axios.get(`${process.env.LANDSCAPE_API}/farmers`).then(response => {
+          console.log(response.data);
+          store.Contact.farms = response.data;
+          store.Farmers.farmers = response.data;
+          done();
+        });
+        break;
+      default:
+        done();
     }
   }
 });

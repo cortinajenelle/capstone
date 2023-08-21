@@ -23,10 +23,8 @@ router.post("/", async (request, response) => {
           requestData
         )
         .then(async mapquestData => {
-          console.log(mapquestData.data.results.locations);
-
-          newFarmer.lat = mapquestData.data.results.locations[0].latLng.lat;
-          newFarmer.lng = mapquestData.data.results.locations[0].latLng.lng;
+          newFarmer.lat = mapquestData.data.results[0].locations[0].latLng.lat;
+          newFarmer.lng = mapquestData.data.results[0].locations[0].latLng.lng;
           const data = await newFarmer.save();
 
           response.json(data);
