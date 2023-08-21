@@ -8,7 +8,7 @@ export default state => html`
 <div id="welcome">
   <h2>Welcome, Digi-Nauts & Planeteers!</h2>
   </div>
-  <div>
+  <div id="welcome">
     <p> Your mission is to support me to return to my fullest health and vitality. Let me explain!
       The year is 2023 and the world is seemingly in chaos from all the waste, litter and over-
       consumption of resources. During this time, I have become unplugged from what brings me
@@ -21,7 +21,7 @@ export default state => html`
       And remember, the power is yours!
   </p>
 </div>
-<div>
+<div id="welcome">
   <h2>xo, Gaia </h2>
 </div>
   <div id="ideabox">

@@ -1,6 +1,8 @@
 import html from "html-literal";
 
 export default state => html`
+  <h1>Farmers</h1>
+  <br />
   <table id="farmers">
     <tr>
       <th>Name</th>
