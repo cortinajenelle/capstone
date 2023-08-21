@@ -3,25 +3,32 @@ html {
   height: auto;
 }
 
+h1 {
+  font-family: "Major Mono Display", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 36px;
+}
+
 h2 {
   font-family: "Major Mono Display", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 h3 {
   font-family: "Major Mono Display", sans-serif;
-  font-size: 14px;
   color: #A3E7AE;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 body {
   font-family: "Sofia Sans", sans-serif;
   font-size: 17px;
-}
-
-#welcome {
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 nav > ul {
@@ -31,90 +38,10 @@ nav > ul {
   padding: 0;
  }
 
- nav > ul > li {
-   padding: 0.5rem;
-   list-style-type: none;
+nav > ul > li {
+  padding: 0.5rem;
+  list-style-type: none;
  }
-
-
-.logo {
-  background: url(./assets/logo.png) center center no-repeat;
-  background-size: cover;
-  margin-left: 10px;
-  width: 200px;
-  height: 200px;
-}
-
-#jumbotron {
-  background: url(./assets/branded-dan-meyers-IQVFVH0ajag-unsplash.png) center center no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-}
-
-img {
-  max-width: 100%;
-  max-height: 300px;
-  height: auto;
-  padding: 0px;
-}
-
-#welcome {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#map {
-  height: 500px;
-}
-
-
-#ideabox {
-  display: flex;
-  justify-content: flex-end;
-  background-color: white;
-  font-size: 15px;
-  padding: 0.5em;
-  border-radius: 5px;
-}
-
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  font-family: "Major Mono Display", sans-serif;
-  color: #A3E7AE;
-  background-color: #000000;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.button:hover {
-  background-color: #f4ba0c;
-}
-
-.footer {
-  border-top: solid 2px #287429;
-  border-bottom: solid 2px #287429;
-  box-sizing: border-box;
-  background: #A3E7AE;
-  margin: 10px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  color: black;
-  text-align: right;
-  padding: 2rem 2rem 2rem;
-  margin: 0rem 0rem;
-}
 
 @media (max-width: 549px){
   .hidden--mobile {
@@ -175,12 +102,113 @@ nav > .fa-bars {
   border-bottom: solid 2px #287429;
   background: #A3E7AE;
   padding: 1em;
-  margin: 0px;
+  margin: 0rem 0rem 0rem;
   width: 100%;
   color:  black;
   align-items: flex-end;
   padding: 2rem 0rem 2rem;
-  margin: 0rem 0rem 0rem;
   font-size: 16px;
 }
  }
+
+ #bioimg {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: url(./assets/savvycoderscapstonebioimg.png) center left no-repeat;
+  height: 120vh;
+  scale: 25%
+}
+
+ .button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  font-family: "Major Mono Display", sans-serif;
+  background-color: #000000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-right: 25px;
+}
+
+.button:hover {
+  background-color: #f4ba0c;
+}
+
+.footer {
+  border-top: solid 2px #287429;
+  border-bottom: solid 2px #287429;
+  box-sizing: border-box;
+  background: #A3E7AE;
+  margin: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: right;
+  padding: 2rem 2rem 2rem;
+  margin: 0rem 0rem;
+}
+
+#form {
+
+}
+
+ #ideabox {
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  font-size: 15px;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+ img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+  padding: 0px;
+}
+
+#jumbotron {
+  background: url(./assets/branded-dan-meyers-IQVFVH0ajag-unsplash.png) center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.logo {
+  background: url(./assets/logo.png) center center no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+#map {
+  height: 500px;
+}
+
+#savvybanner {
+  background: url(./assets/SavvyCodersFullStack.jpg) center center no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-bottom: 10px;
+}
+
+#welcome {
+  display: inline-block;
+  justify-content: flex-start;
+  margin-left: 25px;
+  margin-right: 25px;
+}
