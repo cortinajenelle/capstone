@@ -9,7 +9,7 @@ export default {
       city: "Dunlap",
       state: "TN",
       zip: "37327",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -19,7 +19,7 @@ export default {
       city: "Cleveland",
       state: "TN",
       zip: "37312",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -29,7 +29,7 @@ export default {
       city: "Chattanooga",
       state: "TN",
       zip: "37407",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -39,7 +39,7 @@ export default {
       city: "Spencer",
       state: "TN",
       zip: "38585",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -49,7 +49,7 @@ export default {
       city: "Clinton",
       state: "TN",
       zip: "37716",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -59,7 +59,7 @@ export default {
       city: "Georgetown",
       state: "TN",
       zip: "37336",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -69,7 +69,7 @@ export default {
       city: "Cleveland",
       state: "TN",
       zip: "37311",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -79,7 +79,7 @@ export default {
       city: "Morrison",
       state: "TN",
       zip: "37357",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -89,7 +89,7 @@ export default {
       city: "Lafayette",
       state: "TN",
       zip: "30728",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     },
     {
@@ -99,7 +99,7 @@ export default {
       city: "Chattanooga",
       state: "TN",
       zip: "37404",
-      commodity: ["veggies", "flowers", "eggs", "honey"],
+      farmgoods: ["veggies", "flowers", "eggs", "honey"],
       opportunity: ["marketing", "website"]
     }
   ],
