@@ -43,7 +43,7 @@ export default {
       opportunity: ["marketing", "website"]
     },
     {
-      name: "Erin's Meadow Herb Farm",
+      name: "Erins Meadow Herb Farm",
       address1: "132 England Drive",
       address2: "",
       city: "Clinton",
@@ -84,7 +84,7 @@ export default {
     },
     {
       name: "Tant Hill Farm",
-      address1: "3698 GA-337",
+      address1: "3698 GA 337",
       address2: "",
       city: "Lafayette",
       state: "TN",

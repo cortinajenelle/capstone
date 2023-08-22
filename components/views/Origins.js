@@ -1,4 +1,5 @@
 import html from "html-literal";
+import biopic from "../../assets/savvycoderscapstonebioimg.png";
 
 export default () => html`
   <div id="fas fa-bars"></div>
@@ -50,8 +51,10 @@ export default () => html`
       leverage support to secure future funding/grants</li>
     </p>
   </section>
-  <section id="bio">
-    <div id="bioimg"></div>
-    <div id="savvybanner"></div>
-  </section>
+  <div id="bio">
+    <div id="bioimg">
+      <img src=${biopic}/>
+    </div>
+    <div id="savvybanner"><a href="https://www.savvycoders.com"></a></div>
+  </div>
 `;

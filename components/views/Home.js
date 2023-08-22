@@ -27,6 +27,6 @@ export default state => html`
   <div id="ideabox">
     <h2>Have An Idea to Propose?</h2>
     <br>
-    <button class="button"><a href="https://landscape-capstone.netlify.app/contact"><h3>Turbo Boost Mission</h3></a>
+    <button class="button"><a href="./Contact"><h3>Turbo Boost Mission</h3></a>
 </div>
 `;
