@@ -4,18 +4,16 @@ export default state => html`
   <h1>Contact</h1>
   <br />
   <div id="map"></div>
-  <div>
-    <br />
-    <p>
-      Are you a local farmer in need of a digital freelancer to support with web
+  <div id="contact">
+    <div id="contactfarmers">
+    <p>Are you a local farmer in need of a digital freelancer to support with web
       design, operations support, social media, file organizing, web
       development, marketing+branding or copywriting?
     </p>
-  </div>
-  <section id="form">
+    <h2>Offer Yer Farmgoods & Get Digital Help:</h2>
+    <br/>
+    <div>
     <form id="form" method="POST" action="">
-      <h2>Offer Yer Farmgoods & Get Digital Help:</h2>
-      <div>
         <label for="name">Farm Name:</label>
         <input
           type="text"
@@ -24,8 +22,7 @@ export default state => html`
           placeholder="Enter Farm Name"
           required
         />
-      </div>
-      <div>
+        <br/>
         <label for="address1">Address1:</label>
         <input
           type="text"
@@ -34,8 +31,7 @@ export default state => html`
           placeholder="Enter Address"
           required
         />
-      </div>
-      <div>
+        <br/>
         <label for="address2">Address2:</label>
         <input
           type="text"
@@ -44,8 +40,7 @@ export default state => html`
           placeholder="Suite, Unit or Box #"
           required
         />
-      </div>
-      <div>
+        <br/>
         <label for="city">City:</label>
         <input
           type="text"
@@ -54,8 +49,7 @@ export default state => html`
           placeholder="Enter City"
           required
         />
-      </div>
-      <div>
+     <br/>
         <label for="state">State:</label>
         <select id="state" name="state">
           <option value="">Select a State</option>
@@ -65,8 +59,7 @@ export default state => html`
           <option value="MS">Mississippi</option>
           <option value="KY">Kentucky</option>
         </select>
-      </div>
-      <div>
+        <br/>
         <label for="zip">Zip Code:</label>
         <input
           type="text"
@@ -75,10 +68,8 @@ export default state => html`
           placeholder="Enter Zip Code"
           required
         />
-      </div>
-      <div>
       <br/>
-        <label for="farmgoods">Farmgoods:</label>
+        <label for="farmgoods"><b><em>Farmgoods:</b></em></label>
         <input
           type="checkbox"
           id="id_of_checkbox1"
@@ -135,9 +126,8 @@ export default state => html`
           value="meat"
           />
         <label for="top7">herbal teas</label>
-      <div>
       <br/>
-        <label for="freelancers">Opportunities:</label>
+        <label for="freelancers"><b><em>Digital Needs:</b></em></label>
         <input
           type="checkbox"
           id="id_of_checkbox1"
@@ -210,25 +200,24 @@ export default state => html`
           value="copywriting"
           />
         <label for="top7">copywriting</label>
-      </div>
-      <br/>
+        <br/>
       <input type="hidden" name="customer" id="customer" value="landScape" />
       <input type="submit" name="submit" value="Submit Farm" />
     </form>
-  </section>
-  <div><p>###</p></div>
-  <div>
+</div>
+  <div id="contactfreelancers">
     <p>
       Are you a digital freelancer wanting to support your local agricultural
       ecosystem? Or maybe you just want to eat a bit healthier in between web
-      development sprints? We've got you covered!
-    </p>
-    <h2>Current Opportunities with Farmers Include:</h2>
+      development sprints? We've got you covered!</p>
+      <h2>Offer Digital Help & Get Yer Farmgoods:</h2>
+</div>
+<div id="contactlist">
     <ul>
       <li>Web Design</li>
       <li>Graphic Design</li>
       <li>Brand Identity & Strategy</li>
-      <li>Mailing Lists & Membership</li>
+      <li>Membership</li>
       <li>Social Media Management</li>
       <li>Web Development</li>
       <li>Cybersecurity</li>
@@ -236,6 +225,7 @@ export default state => html`
       <li>Data & Business Analysis</li>
       <li>Copywriting</li>
     </ul>
-    <button class="button"><a href="https://landscape-capstone.netlify.app/contact"><h3>Apply to Freelance</h3></a>
+    <button class="button"><a href="mailto:cortinajenellecaldwell@gmail.com"><h3>Apply to Freelance</h3></a>
   </div>
+</div>
 `;
