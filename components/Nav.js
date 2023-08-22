@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 export default links => html`
   <nav>
     <div class="logo">
-      <a href="https://landscape-capstone.netlify.app">
+      <a href="./Home">
         <img src="${logo}" width="200" height="200" alt="landScape logo" />
       </a>
     </div>

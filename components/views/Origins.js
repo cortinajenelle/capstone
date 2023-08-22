@@ -1,4 +1,6 @@
 import html from "html-literal";
+import biopic from "../../assets/savvycoderscapstonebioimg.png";
+import savvybanner from "../../assets/SavvyCodersFullStack.jpg";
 
 export default () => html`
   <div id="fas fa-bars"></div>
@@ -50,8 +52,25 @@ export default () => html`
       leverage support to secure future funding/grants</li>
     </p>
   </section>
-  <section id="bio">
-    <div id="bioimg"></div>
-    <div id="savvybanner"></div>
-  </section>
+  <div id="bio">
+    <div id="bioimg">
+      <img src=${biopic}/>
+    </div>
+    <div id="bioparapgraph">
+    <p>
+      <b>Web Application Developed by</b>: <em>Cortina Jenelle Caldwell, UX Designer</em>
+    </p>
+    <p><a href=https://github.com/cortinajenelle>GitHub</a> |
+      <a href=https://www.linkedin.com/in/cortina-jenelle-caldwell>LinkedIN</a> |
+      <a href=https://www.behance.net/itscortinajenelle>Behance</a> |
+      <a href= https://contra.com/cortinajenelle>Contra</a> |
+      <a href=https://www.cortinajenelle.com>Website</a>
+
+    </p>
+    <br>
+    <p><em>Available for web development opportunities, projects & teams!</em></p>
+    </div>
+  </div>
+  <div id="savvybanner"><img src=${savvybanner}/><a href="https://www.savvycoders.com"></a>
+  </div>
 `;
