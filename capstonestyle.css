@@ -150,6 +150,22 @@ nav > .fa-bars {
   background-color: #f4ba0c;
 }
 
+.container {
+  display: flex;
+}
+
+.left, .right {
+  flex: 1;  /* 1/4 width */
+}
+
+.middle {
+  flex: 2;  /* 2/4 width */
+}
+
+.left { background-color: lightblue; }
+.middle { background-color: lightcoral; }
+.right { background-color: lightgreen; }
+
 #contact {
   display: flex;
   justify-content: flex-start;
