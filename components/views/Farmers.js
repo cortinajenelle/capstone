@@ -3,9 +3,9 @@ import html from "html-literal";
 export default state => html`
   <h1>Farmers</h1>
   <br />
-  <div id="columns">
-    <div id="one">ONE</div>
-    <div id="two">
+  <div id="column">
+    <div id="left">ONE</div>
+    <div id="middle">
       <table id="farmers">
         <tr>
           <th>Name</th>
@@ -23,6 +23,6 @@ export default state => html`
           .join("")}
       </table>
     </div>
-    <div id="three">THREE</div>
+    <div id="right">THREE</div>
   </div>
 `;

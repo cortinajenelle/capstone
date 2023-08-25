@@ -64,7 +64,7 @@ export default () => html`
       <a href=https://www.linkedin.com/in/cortina-jenelle-caldwell>LinkedIN</a> |
       <a href=https://www.behance.net/itscortinajenelle>Behance</a> |
       <a href= https://contra.com/cortinajenelle>Contra</a> |
-      <a href=https://www.cortinajenelle.com>Website</a>
+      <a href=https://www.cortinajenelle.com/equity>Equity in Tech</a>
 
     </p>
     <br>
