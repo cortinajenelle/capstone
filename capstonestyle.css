@@ -19,9 +19,9 @@ h2 {
 
 h3 {
   font-family: "Major Mono Display", sans-serif;
-  color: #A3E7AE;
+  color: #000000;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 body {
@@ -111,6 +111,11 @@ nav > .fa-bars {
 }
  }
 
+ #about {
+  margin-left: 25px;
+  margin-right: 25px;
+ }
+
  #bio {
   display: flex;
  }
@@ -121,7 +126,7 @@ nav > .fa-bars {
   flex-direction: column;
   margin-left: 25px;
   margin-top: 15px;
-  margin-right: 40px;
+  margin-right: 25px;
 }
 
 #bioparagraph {
@@ -152,19 +157,26 @@ nav > .fa-bars {
 
 .container {
   display: flex;
+  flex-direction: column;
 }
 
-.left, .right {
+#left, #right {
   flex: 1;  /* 1/4 width */
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
 }
 
-.middle {
+#middle {
   flex: 2;  /* 2/4 width */
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
 }
 
-.left { background-color: lightblue; }
-.middle { background-color: lightcoral; }
-.right { background-color: lightgreen; }
+#left { background-color: lightblue; }
+#middle { background-color: lightcoral; }
+#right { background-color: lightgreen; }
 
 #contact {
   display: flex;
@@ -176,6 +188,10 @@ nav > .fa-bars {
   display: flex;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+#farmers {
+  justify-content: flex-start;
 }
 
 .footer {
