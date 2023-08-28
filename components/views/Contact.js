@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default state => html`
-  <h1>Contact</h1>
+  <h1>CONTACT</h1>
   <br />
   <div id="map"></div>
   <div id="contact">
@@ -10,7 +10,7 @@ export default state => html`
       design, operations support, social media, file organizing, web
       development, marketing+branding or copywriting?
     </p>
-    <h2>Offer Yer Farmgoods & Get Digital Help:</h2>
+    <h2>Offer Yer Farmgoods & Git Digital Help:</h2>
     <br/>
     <div>
     <form id="form" method="POST" action="">
@@ -210,7 +210,7 @@ export default state => html`
       Are you a digital freelancer wanting to support your local agricultural
       ecosystem? Or maybe you just want to eat a bit healthier in between web
       development sprints? We've got you covered!</p>
-      <h2>Offer Digital Help & Get Yer Farmgoods:</h2>
+      <h2>Offer Digital Help & Git Yer Farmgoods:</h2>
 </div>
 <div id="contactlist">
     <ul>
@@ -225,7 +225,7 @@ export default state => html`
       <li>Data & Business Analysis</li>
       <li>Copywriting</li>
     </ul>
-    <button class="button"><a href="mailto:cortinajenellecaldwell@gmail.com"><h3>Apply to Freelance</h3></a>
+    <button class="button"><a href="mailto:cortinajenellecaldwell@gmail.com"><h3>APPLY TO FREELANCE</h3></a>
   </div>
 </div>
 `;

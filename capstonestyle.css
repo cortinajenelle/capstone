@@ -19,9 +19,10 @@ h2 {
 
 h3 {
   font-family: "Major Mono Display", sans-serif;
-  color: #000000;
+  color: #A3E7AE;
   font-weight: bold;
   font-size: 18px;
+  background: #000000;
 }
 
 body {
@@ -135,6 +136,10 @@ nav > .fa-bars {
   flex-direction: column;
 }
 
+#biotext {
+  margin-top: 115px;
+}
+
  .button {
   display: inline-block;
   padding: 15px 25px;
@@ -174,9 +179,9 @@ nav > .fa-bars {
   margin-bottom: 25px;
 }
 
-#left { background-color: lightblue; }
-#middle { background-color: lightcoral; }
-#right { background-color: lightgreen; }
+#left { background-color: white; }
+#middle { background-color: white; }
+#right { background-color: white; }
 
 #contact {
   display: flex;

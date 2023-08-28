@@ -4,7 +4,7 @@ import savvybanner from "../../assets/SavvyCodersFullStack.jpg";
 
 export default () => html`
   <div id="fas fa-bars"></div>
-  <h1>Origins</h1>
+  <h1>ORIGINS</h1>
   <br />
   <section id="about">
     <p>
@@ -58,7 +58,7 @@ export default () => html`
     </div>
     <div id="bioparapgraph">
     <p>
-      <b>Web Application Developed by</b>: <em>Cortina Jenelle Caldwell, UX Designer</em>
+      <div id="biotext"><b>Web Application Developed by</b>: <em>Cortina Jenelle Caldwell, UX Designer</em>
     </p>
     <p><a href=https://github.com/cortinajenelle>GitHub</a> |
       <a href=https://www.linkedin.com/in/cortina-jenelle-caldwell>LinkedIN</a> |
@@ -67,8 +67,8 @@ export default () => html`
       <a href=https://www.cortinajenelle.com/equity>Equity in Tech</a>
 
     </p>
-    <br>
     <p><em>Available for web development opportunities, projects & teams!</em></p>
+</div>
     </div>
   </div>
   <div id="savvybanner"><img src=${savvybanner}/><a href="https://www.savvycoders.com"></a>
