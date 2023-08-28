@@ -6,7 +6,7 @@ export default state => html`
 <div id="jumbotron">
   </div>
 <div id="welcome">
-  <h2>Welcome, Digi-Nauts & Planeteers!</h2>
+  <h2>WELCOME, DIGI-NAUTS & PLANETEERS!</h2>
   </div>
   <div id="welcome">
     <p> Your mission is to support me to return to my fullest health and vitality. Let me explain!
@@ -22,11 +22,11 @@ export default state => html`
   </p>
 </div>
 <div id="welcome">
-  <h2>xo, Gaia </h2>
+  <h2>XO, GAIA </h2>
 </div>
   <div id="ideabox">
-    <h2>Have An Idea to Propose?</h2>
+    <h2>HAVE AN IDEA TO PROPOSE?</h2>
     <br>
-    <button class="button"><a href="./Contact"><h3>Turbo Boost Mission</h3></a>
+    <button class="button"><a href="./Contact"><h3>TURBO BOOST MISSION</h3></a>
 </div>
 `;

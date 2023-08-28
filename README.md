@@ -2,10 +2,11 @@
 
 ## Style Guide
 
-Color Palette: Night (#0B1507) / Office Green (#287429) / Celadon (#A3E7AE) / White (#ffffff / Goldenrod #f4ba0c)
-Images: IMAGES ARE IN LINKS FILE
+Color Palette: Black (#000000) / Office Green (#287429) / Celadon (#A3E7AE) / White (#ffffff / Goldenrod #f4ba0c)
+Images: IMAGES ARE IN ASSETS FOLDER
 Fonts (Google Fonts): Body=Courier Prime / Title= Sofia Sans or Major Mono Display
-Logo (Free Logo Creator): **INSERT LOGO LINK**
+Logo (Free Logo Creator): **https://freelogocreator.com/logo-details/MTQ4MDF+MTA4NDE=#**
+Font Awesome: Hamburger Bar
 Navigation + Layout from L to R: Home, Origins, Farmers, Freelancers, Contact
 
 ## Capstone Idea (Definition Statement)
