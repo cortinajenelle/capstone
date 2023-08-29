@@ -10,47 +10,13 @@ router.post("/", async (request, response) => {
   try {
     const newFarmer = new Farmer(request.body);
 
-    if (
-      newFarmer.address1 &&
-      newFarmer.address2 &&
-      newFarmer.city &&
-      newFarmer.state
-    ) {
+    if (newFarmer.address1 && newFarmer.city && newFarmer.state) {
       const requestData = {
         location: `${newFarmer.address1} ${newFarmer.address2} ${newFarmer.city} ${newFarmer.state}`,
         options: {
           thumbMaps: false
         }
       };
-
-      // Create farm route
-      router.post("/farm", async (request, response) => {
-        try {
-          const newFarm = new Farm(request.body);
-
-          if (
-            newFarm.address1 &&
-            newFarm.address2 &&
-            newFarm.city &&
-            newFarm.state
-          ) {
-            const requestData = {
-              location: `${newFarmer.address1} ${newFarmer.address2} ${newFarmer.city} ${newFarmer.state}`,
-              options: {
-                thumbMaps: false
-              }
-            };
-          }
-        } catch (error) {
-          // Output error to the console incase it fails to send in response
-          console.log(error);
-
-          if ("name" in error && error.name === "ValidationError")
-            return response.status(400).json(error.errors);
-
-          return response.status(500).json(error.errors);
-        }
-      });
 
       await axios
         .post(
