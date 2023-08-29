@@ -26,123 +26,87 @@ function afterRender(state) {
   });
 
   if (state.view === "Contact") {
-    document.querySelector("form").addEventListener("submit", event => {
-      event.preventDefault();
+    /*
+      Please refer to the documentation:
+      https://developer.mapquest.com/documentation/mapquest-js/v1.3/
+    */
 
-      const inputList = event.target.elements;
-      console.log("Input Element List", inputList);
+    L.mapquest.key = process.env.MAPQUEST_KEY;
 
-      const farmers = [];
+    const baseLayer = L.mapquest.tileLayer("map");
+    const precipitationLayer = L.tileLayer(
+      `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
+      { layer: "precipitation_new" }
+    );
+    const temperatureLayer = L.tileLayer(
+      `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
+      { layer: "temp_new" }
+    );
+    const windLayer = L.tileLayer(
+      `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
+      { layer: "wind_new" }
+    );
 
-      for (let input of inputList.farmers) {
-        if (input.checked) {
-          farmers.push(input.value);
-        }
-      }
-
-      const requestData = {
-        name: inputList.name.value,
-        address1: inputList.address1.value,
-        address2: inputList.address2.value,
-        city: inputList.city.value,
-        state: inputList.state.value,
-        zip: inputList.zip.value,
-        farmgoods: inputList.farmgoods.value,
-        opportunity: inputList.opportunity.value
-      };
-
-      console.log("request Body", requestData);
-
-      axios
-        // Make a POST request to the API to create a new pizza
-        .post(`${process.env.MAPQUEST_KEY}/farmers`, requestData)
-        .then(response => {
-          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Farmer.farmers.push(response.data);
-          router.navigate("/Farmer");
-        })
-        // If there is an error log it to the console
-        .catch(error => {
-          console.log("UH OH!", error);
-        });
+    // 'map' refers to a <div> element with the ID map
+    const map = L.mapquest.map("map", {
+      center: [42, -71],
+      layers: baseLayer,
+      zoom: 5
     });
-  }
+    console.log(state);
+    state.farms.forEach(farm => {
+      L.mapquest
+        .textMarker([farm.lat, farm.lng], {
+          text: farm.name,
+          subtext: "Click for Farm Details",
+          position: "right",
+          type: "marker",
+          hover: "Howdy",
+          icon: {
+            primaryColor: "#333333",
+            secondaryColor: "#333333",
+            size: "sm"
+          }
+        })
+        .addTo(map);
+    });
 
-  L.mapquest.key = process.env.MAPQUEST_KEY;
-
-  const baseLayer = L.mapquest.tileLayer("map");
-  const precipitationLayer = L.tileLayer(
-    `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
-    { layer: "precipitation_new" }
-  );
-  const temperatureLayer = L.tileLayer(
-    `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
-    { layer: "temp_new" }
-  );
-  const windLayer = L.tileLayer(
-    `https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`,
-    { layer: "wind_new" }
-  );
-
-  // 'map' refers to a <div> element with the ID map
-  const map = L.mapquest.map("map", {
-    center: [42, -71],
-    layers: baseLayer,
-    zoom: 5
-  });
-  // console.log(state);
-  state.farms.forEach(farm => {
-    L.mapquest
-      .textMarker([farm.lat, farm.lng], {
-        text: farm.name,
-        subtext: "Click for Farm Details",
-        position: "right",
-        type: "marker",
-        hover: "Howdy",
-        icon: {
-          primaryColor: "#333333",
-          secondaryColor: "#333333",
-          size: "sm"
-        }
+    L.marker([30, -90], {
+      icon: L.mapquest.icons.marker({
+        primaryColor: "#22407F",
+        secondaryColor: "#3B5998",
+        shadow: true,
+        size: "md"
+        // symbol: 'T'
       })
+    }).addTo(map);
+
+    map.addControl(L.mapquest.control());
+
+    // L.mapquest
+    //   .directionsControl({
+    //     routeSummary: {
+    //       enabled: false
+    //     },
+    //     narrativeControl: {
+    //       enabled: true,
+    //       compactResults: false
+    //     }
+    //   })
+    //   .addTo(map);
+
+    // https://leafletjs.com/reference.html#control-layers
+    L.control
+      .layers(
+        {},
+        {
+          Temperature: temperatureLayer,
+          Precipitation: precipitationLayer,
+          Wind: windLayer
+        }
+      )
       .addTo(map);
-  });
-
-  L.marker([30, -90], {
-    icon: L.mapquest.icons.marker({
-      primaryColor: "#22407F",
-      secondaryColor: "#3B5998",
-      shadow: true,
-      size: "md"
-      // symbol: 'T'
-    })
-  }).addTo(map);
-
-  map.addControl(L.mapquest.control());
-
-  // L.mapquest
-  //   .directionsControl({
-  //     routeSummary: {
-  //       enabled: false
-  //     },
-  //     narrativeControl: {
-  //       enabled: true,
-  //       compactResults: false
-  //     }
-  //   })
-  //   .addTo(map);
-
-  // https://leafletjs.com/reference.html#control-layers
-  L.control
-    .layers(
-      {},
-      {
-        Temperature: temperatureLayer,
-        Precipitation: precipitationLayer,
-        Wind: windLayer
-      }
-    )
-    .addTo(map);
+  }
 }
 
 //  ADD ROUTER HOOKS HERE ...
@@ -157,7 +121,7 @@ router.hooks({
     switch (view) {
       case "Contact":
       case "Farmers":
-        axios.get(`${process.env.MAPQUEST_KEY}/farmers`).then(response => {
+        axios.get(`${process.env.LANDSCAPE_API}/farmers`).then(response => {
           console.log(response.data);
           store.Contact.farms = response.data;
           store.Farmers.farmers = response.data;
