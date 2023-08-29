@@ -13,7 +13,7 @@ export default state => html`
     <h2>Offer Yer Farmgoods & Git Digital Help:</h2>
     <br/>
     <div>
-    <form id="form" method="POST" action="">
+    <form id="contactform" method="POST" action="">
         <label for="name">Farm Name:</label>
         <input
           type="text"
@@ -38,7 +38,6 @@ export default state => html`
           name="address2"
           id="address2"
           placeholder="Suite, Unit or Box #"
-          required
         />
         <br/>
         <label for="city">City:</label>
@@ -70,13 +69,6 @@ export default state => html`
         />
       <br/>
         <label for="farmgoods"><b><em>Farmgoods:</b></em></label>
-        <input
-          type="checkbox"
-          id="id_of_checkbox1"
-          class="items1"
-          name="farmgoods"
-          value="Farmgoods"
-        />
         <label for="top1">eggs</label>
         <input
           type="checkbox"
@@ -127,7 +119,7 @@ export default state => html`
           />
         <label for="top7">herbal teas</label>
       <br/>
-        <label for="freelancers"><b><em>Digital Needs:</b></em></label>
+        <label><b><em>Digital Needs:</b></em></label>
         <input
           type="checkbox"
           id="id_of_checkbox1"

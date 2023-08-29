@@ -106,6 +106,57 @@ function afterRender(state) {
         }
       )
       .addTo(map);
+
+    // Contact Form Submit Handler
+    document.querySelector("#contactform").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      const farmgoods = [];
+
+      for (let input of inputList.farmgoods) {
+        if (input.checked) {
+          farmgoods.push(input.value);
+        }
+      }
+
+      const freelancers = [];
+
+      for (let input of inputList.freelancers) {
+        if (input.checked) {
+          freelancers.push(input.value);
+        }
+      }
+
+      const requestData = {
+        name: inputList.name.value,
+        address1: inputList.address1.value,
+        address2: inputList.address2.value,
+        city: inputList.city.value,
+        state: inputList.state.value,
+        zip: inputList.zip.value,
+        farmgoods: farmgoods,
+        opportunity: freelancers
+      };
+
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`${process.env.LANDSCAPE_API}/farmers`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Contact.farms.push(response.data);
+          store.Farmers.farmers.push(response.data);
+          router.navigate("/Contact");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("UH OH!", error);
+        });
+    });
   }
 }
 
@@ -131,6 +182,14 @@ router.hooks({
       default:
         done();
     }
+  },
+  already: params => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Home";
+
+    render(store[view]);
   }
 });
 
