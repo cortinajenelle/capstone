@@ -62,7 +62,7 @@ export default state => html`
           email + phone, etc
         </li>
         <li>
-          Freelancers Page - host an interactive directory of farms with a
+          Freelancers Page - host an interactive directory of freelancers with a
           search feature
         </li>
         <li>
