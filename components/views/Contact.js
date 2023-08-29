@@ -201,7 +201,6 @@ export default state => html`
           />
         <label for="top7">copywriting</label>
         <br/>
-      <input type="hidden" name="customer" id="customer" value="landScape" />
       <input type="submit" name="submit" value="Submit Farm" />
     </form>
 </div>
